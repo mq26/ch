@@ -10,10 +10,15 @@ namespace methods
     {
         static void Main(string[] args)
         {
-         //  Bisection bis = new Bisection();
-           //  Horda hord = new Horda();
-             Newtone newtone = new Newtone();
-         //   Iteration it = new Iteration();
+             
+              Bisection bis = new Bisection();
+              Horda hord = new Horda();
+              Newtone newtone = new Newtone();
+              Iteration it = new Iteration();
+             /*
+            Equalation eq = new Equalation();
+            Console.WriteLine(eq.Calculate(3.5)); 
+          */
             Console.Read();
         }
     }

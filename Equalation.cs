@@ -24,9 +24,9 @@ namespace methods
         }
         private void initLimit()
         {
-            Limits.Add(new double[] { 3, 4 });
-        //  Limits.Add(new double[] { 0, 1 });
-         //  Limits.Add(new double[] { -4, -3 }); 
+              Limits.Add(new double[] { 3, 4,  22});
+              Limits.Add(new double[] { 0, 1, -12 });
+             Limits.Add(new double[] { -4, -3, 22 }); 
            // Limits.Add(new double[] { 1, 1.5 });
         }
 
@@ -36,6 +36,12 @@ namespace methods
            return value;
         }
 
+        public double iterat(double x, double l)
+        {
+            double value = x - Calculate(x) / l;
+            return value;
+        }
+    
         public double itCalculateMod(double x)
         {
 
@@ -47,8 +53,7 @@ namespace methods
         public double itCalculate(double x)
         {
             double value = (x * x * x + 6) / 12;
-
-            Console.WriteLine("X: " + x + " Value: " + value);
+             
             // уравнение   
             return value;
         }

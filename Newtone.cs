@@ -20,9 +20,10 @@ namespace methods
         {
             double x0 = 0;
             double xi = 0;
+            int counter = 0;
             foreach (double[] limit in eq.limits)
             {
-                
+                counter = 0;
                 xi = findX(limit[0], limit[1]); 
                 if(x0 != -9999)
                 {
@@ -30,10 +31,10 @@ namespace methods
                     {
                         x0 = xi;
                         xi = x0 - (eq.Calculate(x0)) / eq.FirstPr(x0);
-
-                        Console.WriteLine(" x: " + x0 + " y " + limit[1] + " c: " + xi);
+                        counter++;
                     } while (Math.Abs((eq.Calculate(x0)) / eq.FirstPr(x0)) >= eq.e);
                     eq.xVal.Add(xi);
+                    eq.xVal.Add(counter);
                 }
                 
             }

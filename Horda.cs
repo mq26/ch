@@ -37,6 +37,7 @@ namespace methods
         public void StardHord()
         {
             double fval = 0;
+            int counter = 0;
             foreach (double[] limit in eq.limits)
             {
 
@@ -66,13 +67,14 @@ namespace methods
                     }
                     else
                     {
-                        xik = Less(limit[1], xi, fval);
-                     
-                        
+                        xik = Less(limit[1], xi, fval); 
                     }
-                    Console.WriteLine("X: " + xi + " Value: " + xik);
+
+                    counter++;
                 } while (Math.Abs(xi - xik) >= eq.e);
                 eq.xVal.Add(xik);
+
+                eq.xVal.Add(counter);
             }
 
             Print.print_x(eq.xVal, "Hord");

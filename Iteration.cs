@@ -19,41 +19,20 @@ namespace methods
         {
             double xi = 0;
             double x0 = 0;
-            
+            int counter = 0;
             foreach (double[] limit in eq.limits)
             {
-                xi = (limit[1]);
-                short valid = eq.iterPrChecker(xi);
-                 
-                   if(valid == -1)
-                    {
-                        valid = eq.iterPrChecker(limit[0]);
-                        if(valid != -1)
-                        {
-                             xi = limit[0];
-                        }
-                    } 
+                xi = (limit[0]);
+                counter = 0;
                     do
                     {
-                        x0 = xi; 
-                  
-                    if (valid == 0)
-                    {
-                        xi = eq.itCalculate(x0);
-                    }
-                    else if (valid == 1)
-                    {
-                        xi = eq.itCalculateMod(x0);
-                    } 
-
-                    else if (valid == 3)
-                    {
-                        xi = eq.itCalculateSecondMode(x0);
-
-                    }
-               
+                        x0 = xi;
+                      
+                    xi = eq.iterat(x0, limit[2]);
+                    counter++;
                 } while (Math.Abs(x0 - xi) >= eq.e);
-                    eq.xVal.Add(xi); 
+                eq.xVal.Add(xi);
+                eq.xVal.Add(counter);
                 }
                 Print.print_x(eq.xVal, "Iteration");
             } 

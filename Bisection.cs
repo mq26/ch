@@ -22,14 +22,13 @@ namespace methods
         }
 
         private void startBis()
-        {
-            Console.WriteLine("Bisection values");
+        { 
             foreach(double[] limit in limits)
             {
                 double val1 = 0;
                 double val2 = 0;
-                double c = 0;
-                Console.WriteLine("____");
+                double c = 0; 
+                int counter = 0;
                 do
                 {
                     val1 = eq.Calculate(limit[0]);
@@ -44,10 +43,12 @@ namespace methods
                     else
                     {
                         limit[0] = (limit[1] + limit[0]) / 2;
-                    } 
+                    }
+                    counter++;
                 } while (Math.Abs(limit[1] - limit[0]) >= e);
                 xVal.Add((limit[1] + limit[0]) / 2);
-                
+                xVal.Add(counter); 
+
             }
             Print.print_x(xVal, "Bisection");
         }

@@ -1,0 +1,7 @@
+F:\Margosha\2 курс\Численные методы\methods\methods\bin\Debug\methods.exe.config
+F:\Margosha\2 курс\Численные методы\methods\methods\bin\Debug\methods.exe
+F:\Margosha\2 курс\Численные методы\methods\methods\bin\Debug\methods.pdb
+F:\Margosha\2 курс\Численные методы\methods\methods\obj\Debug\methods.csprojResolveAssemblyReference.cache
+F:\Margosha\2 курс\Численные методы\methods\methods\obj\Debug\methods.exe
+F:\Margosha\2 курс\Численные методы\methods\methods\obj\Debug\methods.pdb
+F:\Margosha\2 курс\Численные методы\methods\methods\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
